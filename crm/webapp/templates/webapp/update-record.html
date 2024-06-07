@@ -1,0 +1,69 @@
+{% extends "webapp/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <body>
+
+        <div class="container bg-light shadow-md p-5 form-layout">
+
+            <h3> Update Records </h3>
+
+            <h6> Update your record below </h6>
+
+            <br>
+            <br>
+
+            <form method = "POST" autocomplete = "off">
+                {% csrf_token %}
+                
+                {{form.first_name|as_crispy_field}}
+
+                <br>
+
+                {{form.last_name|as_crispy_field}}
+
+                <br>
+
+                {{form.email|as_crispy_field}}
+
+                <br>
+
+                {{form.phone|as_crispy_field}}
+
+                <br>
+
+                {{form.address|as_crispy_field}}
+
+                <br>
+
+                {{form.city|as_crispy_field}}
+
+                <br>
+
+                {{form.state|as_crispy_field}}
+
+                <br>
+
+                {{form.country|as_crispy_field}}
+                
+                <br>
+                
+                {{form.pincode|as_crispy_field}}
+
+                <br>
+
+                <br>
+
+                <button type="submit" class="btn btn-info"> Update Record <i class="fa fa-check" aria-hidden="true"></i></button>
+                &nbsp
+                <a href="{% url 'dashboard' %}" class="btn btn-secondary"> Return <i class="fa fa-arrow-left" aria-hidden="true"></i> </a>
+                
+            </form>
+
+        </div>
+
+    </body>
+
+{% endblock %}

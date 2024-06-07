@@ -1,0 +1,16 @@
+/* h1 {
+    color: chartreuse;
+} */
+
+.form-layout{
+
+    border-radius: 15px;
+    width: 500px;
+}
+
+body{
+    /* background: rgb(182,180,214); */
+    /* background: linear-gradient(90deg,  #e1b382, #c89666, #2d545e, #12343b); */
+    background: rgb(112,240,202);
+    background: linear-gradient(90deg, rgba(112,240,202,1) 0%, rgba(40,86,231,1) 100%);
+}
